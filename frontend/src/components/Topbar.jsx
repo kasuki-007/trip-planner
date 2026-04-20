@@ -4,11 +4,7 @@ import { useUIStore } from '../store/uiStore';
 import { Avatar } from './ui/Avatar';
 import { useNavigate } from 'react-router-dom';
 
-interface TopbarProps {
-  title?: string;
-}
-
-export function Topbar({ title }: TopbarProps) {
+export function Topbar({ title }) {
   const { currentUser } = useAuthStore();
   const { toggleSidebar } = useUIStore();
   const navigate = useNavigate();
