@@ -1,6 +1,5 @@
 import api from './api';
 import { signInWithRedirect, getRedirectResult } from 'firebase/auth';
-import { auth, googleProvider } from '../config/firebase';
 
 export const authService = {
   async register(name, email, password) {
@@ -27,15 +26,4 @@ export const authService = {
     return res.data;
   },
 
-  async initiateGoogleLogin() {
-    await signInWithRedirect(auth, googleProvider);
-  },
-
-  async handleGoogleRedirect() {
-    const result = await getRedirectResult(auth);
-    if (!result) return null;
-    const idToken = await result.user.getIdToken();
-    const res = await api.post('/auth/google', { idToken });
-    return res.data;
-  },
 };
