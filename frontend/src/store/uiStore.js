@@ -2,7 +2,7 @@ import { create } from 'zustand';
 
 
 
-export const useUIStore = create<UIState>((set) => ({
+export const useUIStore = create((set) => ({
   sidebarOpen: true,
   activeModal: null,
   modalData: {},

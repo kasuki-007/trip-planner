@@ -20,7 +20,7 @@ const schema = z.object({
 
 export function ReservationForm({ isOpen, onClose, onSave }) {
   const { currentUser } = useAuthStore();
-  const { register, handleSubmit, reset, formState: { errors, isSubmitting } } = useForm<FormData>({
+  const { register, handleSubmit, reset, formState: { errors, isSubmitting } } = useForm({
     resolver: zodResolver(schema),
     defaultValues: { type: 'hotel' },
   });

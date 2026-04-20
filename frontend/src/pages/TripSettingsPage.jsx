@@ -35,7 +35,7 @@ export function TripSettingsPage() {
   const { openModal, closeModal, activeModal } = useUIStore();
   const { canDeleteTrip } = usePermissions();
 
-  const { register, handleSubmit, reset, formState: { errors, isSubmitting, isDirty } } = useForm<FormValues>({
+  const { register, handleSubmit, reset, formState: { errors, isSubmitting, isDirty } } = useForm({
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     resolver: zodResolver(schema),
   });

@@ -11,7 +11,7 @@ const sizeClasses = {
 };
 
 export function Modal({ isOpen, onClose, title, children, size = 'md', footer }) {
-  const overlayRef = useRef<HTMLDivElement>(null);
+  const overlayRef = useRef(null);
 
   useEffect(() => {
     const handleKey = (e) => {

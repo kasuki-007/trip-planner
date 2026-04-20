@@ -10,7 +10,7 @@ import {
 import toast from 'react-hot-toast';
 
 export function ChecklistsPage() {
-  const { id } = useParam();
+  const { id } = useParams();
   const { data, isLoading } = useChecklists(id);
   const { mutateAsync: toggle } = useToggleChecklistItem(id);
   const { mutateAsync: addItem } = useAddChecklistItem(id);

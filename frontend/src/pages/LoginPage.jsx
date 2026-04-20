@@ -26,7 +26,7 @@ export function LoginPage() {
     handleSubmit,
     setError,
     formState: { errors, isSubmitting },
-  } = useForm<FormData>({ resolver: zodResolver(schema) });
+  } = useForm({ resolver: zodResolver(schema) });
 
   useEffect(() => {
     setGoogleLoading(true);

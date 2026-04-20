@@ -32,7 +32,7 @@ export function CreateTripModal({ isOpen, onClose }) {
     handleSubmit,
     reset,
     formState: { errors, isSubmitting },
-  } = useForm<FormData>({ resolver: zodResolver(schema) });
+  } = useForm({ resolver: zodResolver(schema) });
 
   const onSubmit = async (data) => {
     if (!currentUser) return;
