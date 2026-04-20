@@ -38,7 +38,7 @@ export function ExpenseForm({ isOpen, onClose, onSave, members }) {
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
         <Input label="Title" placeholder="e.g. Team dinner" error={errors.title?.message} {...register('title')} />
         <div className="grid grid-cols-2 gap-4">
-          <Input label="Amount (USD)" type="number" step="0.01" placeholder="0.00" error={errors.amount?.message} {...register('amount')} />
+          <Input label="Amount (INR)" type="number" step="0.01" placeholder="0.00" error={errors.amount?.message} {...register('amount')} />
           <Input label="Date" type="date" error={errors.date?.message} {...register('date')} />
         </div>
         <Select label="Category" options={categoryOptions} error={errors.category?.message} {...register('category')} />

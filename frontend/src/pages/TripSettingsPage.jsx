@@ -88,7 +88,7 @@ export function TripSettingsPage() {
             <Input label="End Date" type="date" error={errors.endDate?.message} {...register('endDate')} />
           </div>
           <Input label="Cover Image URL (optional)" placeholder="https://..." error={errors.coverImage?.message} {...register('coverImage')} />
-          <Input label="Budget (USD)" type="number" step="100" error={errors.budget?.message} {...register('budget')} />
+          <Input label="Budget (INR)" type="number" step="100" error={errors.budget?.message} {...register('budget')} />
           <Textarea label="Description (optional)" rows={3} {...register('description')} />
           <div className="flex justify-end">
             <Button type="submit" loading={isSubmitting} disabled={!isDirty}>Save Changes</Button>

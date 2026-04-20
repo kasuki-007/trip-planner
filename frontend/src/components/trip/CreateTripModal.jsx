@@ -45,7 +45,7 @@ export function CreateTripModal({ isOpen, onClose }) {
         coverImage: data.coverImage || undefined,
         description: data.description,
         budget: data.budget ? parseFloat(data.budget) : undefined,
-        currency: 'USD',
+        currency: 'INR',
         members: [{ userId: currentUser.id, role: ROLES.OWNER }],
       });
       toast.success('Trip created!');
@@ -107,7 +107,7 @@ export function CreateTripModal({ isOpen, onClose }) {
           {...register('coverImage')}
         />
         <Input
-          label="Budget (USD)"
+          label="Budget (INR)"
           type="number"
           placeholder="5000"
           error={errors.budget?.message}
