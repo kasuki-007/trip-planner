@@ -24,13 +24,6 @@ export function Topbar({ title }) {
       )}
 
       <div className="ml-auto flex items-center gap-3">
-        <button
-          className="p-2 rounded-lg text-[#6B7280] hover:bg-[#F8F9FA] hover:text-[#1A1A2E] transition-colors relative"
-          aria-label="Notifications"
-        >
-          <Bell className="w-5 h-5" />
-          <span className="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-[#E94560]" />
-        </button>
 
         {currentUser && (
           <button
