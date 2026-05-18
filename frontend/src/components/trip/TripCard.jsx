@@ -61,7 +61,7 @@ export function TripCard({ trip, userRole, members }) {
           </div>
           {trip.budget && (
             <span className="text-xs font-semibold text-[#10B981]">
-              ${trip.budget.toLocaleString()}
+              ₹{trip.budget.toLocaleString()}
             </span>
           )}
         </div>

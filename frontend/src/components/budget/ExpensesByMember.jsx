@@ -28,7 +28,7 @@ export function ExpensesByMember({ expenses, members }) {
       <BarChart data={data} margin={{ top: 10, right: 10, left: 0, bottom: 5 }}>
         <CartesianGrid strokeDasharray="3 3" stroke="#E0E0E0" />
         <XAxis dataKey="name" tick={{ fontSize: 12, fill: '#6B7280' }} />
-        <YAxis tick={{ fontSize: 12, fill: '#6B7280' }} tickFormatter={(v) => `$${v}`} />
+        <YAxis tick={{ fontSize: 12, fill: '#6B7280' }} tickFormatter={(v) => `₹${v}`} />
         <Tooltip formatter={((val) => formatCurrency(Number(val)))} />
         <Bar dataKey="amount" fill="#E94560" radius={[4, 4, 0, 0]} />
       </BarChart>
